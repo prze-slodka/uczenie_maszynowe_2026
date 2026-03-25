@@ -1,5 +1,5 @@
 import math as m
-X = [("Kup telewizor 20% taniej", "spam"), ("czy piwo jutro?", "ham"),("promocje na warzywa!", "spam"), ("spotkanie o 18", "ham"), ("super okazja kup teraz", "spam"), ("idziemy na wykład?", "ham")]
+X = [("Kup telewizor 20% taniej", "spam"), ("czy piwo jutro?", "ham"),("promocje na warzywa!", "spam"), ("spotkanie o 18", "ham"), ("super okazja kup teraz", "spam"), ("idziemy na wykład?", "ham"),("co robisz wieczorem?", "ham"),("spotkajmy się jutro rano", "ham"),("pamiętaj o zakupach", "ham"),("wyślij mi notatki z zajęć", "ham"),("idziemy dziś na siłownię?", "ham"),("zadzwonię później", "ham"),("masz chwilę na rozmowę?", "ham"),("do zobaczenia na uczelni", "ham"),("czy masz czas jutro?", "ham"),("spotkanie zostało przełożone", "ham"),("wygraj iphone kliknij teraz", "spam"),("promocja tylko dzisiaj 50% taniej", "spam"),("zarób szybko pieniądze online", "spam"),("kup teraz zapłać mniej", "spam"),("oferta specjalna tylko dla ciebie", "spam"),("kliknij tutaj aby odebrać nagrodę", "spam"),("darmowa dostawa tylko dziś", "spam"),("super rabaty na elektronikę", "spam"),("okazja dnia nie przegap", "spam"),("kup taniej już teraz", "spam"),]
 
 ogolne = []
 spam_words = {}
