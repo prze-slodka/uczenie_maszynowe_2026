@@ -1,5 +1,24 @@
 # uczenie_maszynowe_2026
 Przedmiot analiza danych i uczenie maszynowe - skrypty własne
 
+Skrypt uruchamia klasyfikację Naive Bayes na zbiorze 20 Newsgroups.
 
-Pierwszy skrypt polega na napisaniu prostego algorytmu naive bayes. Dla testów wykorzystałyśmy prosty schemat - baza X posiada w sobie przykłady zdań oraz ich klasę (spam/nie spam). na podstawie tego w test możemy weryfikować czy dane zdanie zostałoby zakwalifikowane jako spam lub nie spam, wykorzystując twierdzenie Bayesa.
+## Uruchamianie
+
+Najpierw zainstaluj zależność:
+
+```bash
+pip install scikit-learn
+```
+
+Następnie uruchom:
+
+```bash
+python naive_bayes.py
+```
+
+Skrypt domyślnie działa w trybie szybszym (ogranicza liczbę dokumentów), żeby nie czekać bardzo długo.
+
+Limity są ustawione bezpośrednio w kodzie: `MAX_TRAIN_DOCS` i `MAX_TEST_DOCS` w pliku `naive_bayes.py`.
+
+Skrypt pobierze dane 20 Newsgroups, wytrenuje klasyfikator `MultinomialNB`, wypisze `accuracy`, raport klasyfikacji oraz kilka przykładowych predykcji.
