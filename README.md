@@ -22,3 +22,13 @@ Skrypt domyślnie działa w trybie szybszym (ogranicza liczbę dokumentów), że
 Limity są ustawione bezpośrednio w kodzie: `MAX_TRAIN_DOCS` i `MAX_TEST_DOCS` w pliku `naive_bayes.py`.
 
 Skrypt pobierze dane 20 Newsgroups, wytrenuje klasyfikator `MultinomialNB`, wypisze `accuracy`, raport klasyfikacji oraz kilka przykładowych predykcji.
+
+## Wlasna implementacja Naive Bayes
+
+Dodany zostal osobny plik `naive_bayes_manual.py`, w ktorym algorytm Multinomial Naive Bayes jest zaimplementowany recznie (bez `sklearn.naive_bayes.MultinomialNB`).
+
+Uruchomienie:
+
+```bash
+python naive_bayes_manual.py
+```

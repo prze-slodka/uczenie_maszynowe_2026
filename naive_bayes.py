@@ -3,6 +3,8 @@ import random       # Do losowego wyboru próbek
 import shutil       # Do usuwania katalogów (w razie błędu cache)
 from pathlib import Path  # Do obsługi ścieżek plików
 
+from skrypt import MultinomialNaiveBayes
+
 
 # Stałe określające maksymalną liczbę dokumentów do pobrania
 # (ograniczenie rozmiaru danych dla szybszego działania)
@@ -35,8 +37,7 @@ def run_20newsgroups_demo() -> None:
     try:
         from sklearn.datasets import fetch_20newsgroups
         from sklearn.feature_extraction.text import CountVectorizer
-        from sklearn.metrics import accuracy_score, classification_report
-        from sklearn.naive_bayes import MultinomialNB
+        from sklearn.metrics import accuracy_score
     except ImportError:
         print("Brak zaleznosci. Zainstaluj: pip install scikit-learn")
         return
@@ -89,14 +90,14 @@ def run_20newsgroups_demo() -> None:
     x_train = vectorizer.fit_transform(train_data)
     x_test = vectorizer.transform(test_data)
 
-    # Trenowanie modelu Naive Bayes (algorytm probabilistyczny dla klasyfikacji)
-    model = MultinomialNB(alpha=1.0)  # alpha=1.0 to wygładzanie Laplace'a
+    # Trenowanie naszego modelu Naive Bayes (własna implementacja)
+    model = MultinomialNaiveBayes(alpha=1.0)
     model.fit(x_train, train_target)
     y_pred = model.predict(x_test)
 
     # Ewaluacja modelu: dokładność na zbiorze testowym
     acc = accuracy_score(test_target, y_pred)
-    print(f"20 Newsgroups accuracy: {acc:.4f}")
+    print(f"20 Newsgroups accuracy (manual NB): {acc:.4f}")
 
 
     # Test na przykładowych zdaniach: sprawdzenie, do której kategorii je model przypisze
